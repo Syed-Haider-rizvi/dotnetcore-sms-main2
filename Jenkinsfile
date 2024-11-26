@@ -51,9 +51,10 @@ pipeline {
                     $credentials = New-Object System.Management.Automation.PSCredential($env:CREDENTIAL_USERNAME, (ConvertTo-SecureString $env:CREDENTIAL_PASSWORD -AsPlainText -Force))
 
                     
-                  // Corrected path with escaped backslashes
-                     $networkPath = "\\\\172.16.14.79\\coreapp2"
-                    New-PSDrive -Name X -PSProvider FileSystem -Root $networkPath -Persist
+                 # Corrected path with escaped backslashes
+$networkPath = "\\\\172.16.14.79\\coreapp2"
+New-PSDrive -Name X -PSProvider FileSystem -Root $networkPath -Persist
+
 
 
 
