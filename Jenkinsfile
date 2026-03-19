@@ -52,7 +52,7 @@ pipeline {
 
                     
                  # Corrected path with escaped backslashes
-$networkPath = "\\\\172.16.82.79\\coreapp2"
+$networkPath = "\\\\172.16.82.79\coreapp2"
 New-PSDrive -Name X -PSProvider FileSystem -Root $networkPath -Persist
 
 
